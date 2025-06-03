@@ -37,7 +37,11 @@ btnContarcaracter.addEventListener('click', () => {
     const meuContador = new ContadorCaracter(textoDigitado);
 
     const numcaracter = meuContador.contarcaracter();
-    resultadoParagrafo.textContent = `Número de caracter: ${numcaracter}`;
+    if(numcaracter > 70) {
+        resultadoParagrafo.textContent = 'Há mais de 70 caracteres em seu texto!'
+    } else {
+        resultadoParagrafo.textContent = `Número de caracter: ${numcaracter}`;
+    }
 });
 
 textoInput.addEventListener('input', () => {
